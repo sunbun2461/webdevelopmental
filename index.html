@@ -1,0 +1,559 @@
+<!--
+website for local machine:
+file:///home/thomas/Dropbox/Web%20Dev/MyGit/Portfolio/webdevelopfolio-about.html
+	building this mobile first, so i will assume everything is going to be for mobile, and then change it. however, does that mean I need two nav bars? i dont put the media query in the HTML so maybe yes I do need two nav bars.
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push_opacity
+current issues: 4/20
+	favicon not working in the tab
+	when you hit the side nav, it resets the page, bringing you back to the top.
+Percentange like progress bar of how you are doing in each skill set (html, javaScript)
+contact page, specifically.
+More details about what kind of code you like, more algorigthms, obvs more sites, what you are interested in.
+Add a why choose me section, and get things from a
+site that says why self taught devs are better and
+use what criteria you fall into. make it snappy
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Folio</title>
+		<link rel="stylesheet" href="assets/stylesheets/mainfolio.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Quicksand|Permanent+Marker" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Lato&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		
+		<!-- this is how to build the overlay
+		https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay
+		-->
+		<div class="mobile-background"></div>
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="webdevelopfolio.html"><i class="fa fa-home"></i></a>
+				<a href="webdevelopfolio-algorithms.html">Algorithms</a>
+				<a href="webdevelopfolio-projects.html">Projects</a>
+				<a href="webdevelopfolio-resume.html">R&eacute;sum&eacute;</a> 
+			</div>
+		</div>
+		<div class="header">
+			<nav>
+				<div class="navLeft">
+					<div class="nav-item">
+						<h1>Thomas Ashton Rio</h1>
+						<p style="font-weight: lighter;">Front-end Web Developer</p>
+					</div>
+				</div>
+				<div class="navRight">
+					<div class="nav-item" >
+						<a href="#" onclick="homeShow()"><i class="fa fa-home"></i></a>
+					</div>
+				
+					<!-- <div class="nav-item">
+						<a href="webdevelopfolio-about.html">About</a>
+					</div>
+					<div class="nav-item">
+						<a href="webdevelopfolio-projects.html">Projects</a>
+					</div>
+					<div class="nav-item">
+						<a href="webdevelopfolio-resume.html">R&eacute;sum&eacute;</a> 
+					</div> -->
+				</div>
+			</nav>
+			<!-- <div id="main" style="overflow:hidden;"> -->
+			<!-- <div class="header"> -->
+			<!-- 
+			<span class="openbtnDesktop" href="#" onclick="openNav2()"><i class="fa fa-bars"></i></span> -->
+<!-- 			<a class='openbtn' href="#" onclick="openNav()"><i class="fa fa-bars"></i></a> -->
+			<div style="padding-left:2%;">
+				<h1 class="mobileOnly">Thomas Ashton Rio</h1>
+				<p style="font-weight: lighter;">Front-end Web Developer</p>
+			</div>
+			<div class="displayArea" style="flex-direction: column;">
+				<div id="startPage" class="displayHome  displayAreaItem">
+					<div class="fa-item fa-item-home">
+						<a href="https://github.com/sunbun2461"  target="_blank"
+				class="fa fa-github fa2"></a><p class="faDescribe">GitHub</p>
+					</div>
+					<div class="fa-item fa-item-home">
+						<a href="https://www.linkedin.com/in/thomas-rio-b2462a3b/" target="_blank" class="fa fa-linkedin fa2"></a><p class="faDescribe">LinkedIn</p>
+					</div>
+					<div class="fa-item fa-item-home">
+						<a href="http://immaturegenius.com" class="fa fa-code fa2" aria-hidden="true" target="_blank"></a><p class="faDescribe">Blog</p>
+					</div>
+					<div class="fa-item fa-item-home">
+						<a  href="assets/images/freecodecampCert.png" class="fa fa-free-code-camp fa2" target="_blank" ></a><p class="faDescribe">Cert</p>	
+					</div>
+				</div>
+				<div id="startPage2" class="displayHome  displayAreaItem">
+					<div class="pitch">
+						<!--<a href="/index-new" ><h2>Passionate.</h2></a>-->
+						<a href="" ><h2>Passionate.</h2></a>
+						<h2>Coachable.</h2>
+						<h2>Someone you'd want to hang out with.</h2>
+					</div>
+				</div>
+				<div id="aboutThomas" class="displayAreaItem">
+					<h3 style="text-align: center;">Dev Tools</h3>
+					<ul>
+						<li onmouseover="goWhite()">
+							<img class="image-row-item" src="assets/images/HTML_Logo.png">
+							<p class="white">HTML5</p>
+						</li>
+						<li>
+							<img class="image-row-item" src="assets/images/css.png">
+							<p>CSS3</p>
+						</li>
+						<li class="li">
+						<img class="image-row-item"  src="assets/images/Javascript-shield.png">
+						<p class="white">JavaScript ES6</p>
+						</li>
+						<li>
+							<img class="image-row-item" src="assets/images/jquery_logo.png">
+							<p>Jquery</p>
+						</li>
+						<li>
+							<img class="image-row-item" src="assets/images/bootstrap_logo.png">
+							<p>Bootstrap 4</p>
+						</li>
+						<li>
+							<img class="image-row-item" src="assets/images/git.svg">
+							<p>Version Control (GitHub)</p>
+						</li>
+						
+					</ul>
+					<section class="image-row">
+						
+						
+					</section>
+				</div>
+				<div id="folio" class="displayAreaItem" style="">
+						<div class="thumb">
+							<a href="http://www.immaturegenius.com">
+								<img src="assets/images/immaturegeniusscreenshot.png">
+								<div class="info-container">
+									<p>Coding Blog</p>
+								</div>
+							</a>
+						</div>
+						<div class="thumb">
+							<a href="https://palindrome.immaturegenius.com" target="_blank">
+								<img src="assets/images/palindrome.png">
+								<div class="info-container">
+									<p>Is it a Palindrome?</p>
+								</div>
+							</a>
+						</div>
+						<div class="thumb">
+							<a href="https://codepen.io/sunbun2461/pen/ePKywV" target="_blank">
+								<img src="assets/images/techdocument-project2.png">
+								<div class="info-container">
+									<p>Technical Doc</p>
+								</div>
+							</a>
+						</div>	<div class="thumb">
+							<a href="http://alarm.immaturegenius.com">
+								<img src="assets/images/alarm-clock.png">
+								<div class="info-container">
+									<p>JS Alarm Clock</p>
+								</div>
+							</a>
+						</div>
+						<div class="thumb">
+							<a href="https://crystalcoastexteriors.com" target="_blank">
+								<img src="assets/images/crystalcoastscreenshot.png">
+								<div class="info-container">
+									<p>CCE 
+									Website</p>
+								</div>
+							</a>
+						</div>
+						<div class="thumb">
+							<a href="https://alarm.immaturegenius.com" target="_blank">
+								<img src="assets/images/digital.png">
+								<div class="info-container">
+									<p>Digital Clock</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				<div id="algorithms" class="displayAreaItem">
+					<p style="text-align: center;">JavaScript Algorithms</p>
+					<p class="small" style="display: flex;width:90vw;text-align: center;">These are Algorithms from freeCodeCamp that I have solved myself.  There are more, I will continue to push to GitHub.</p><br>
+					<p class="small1" style="display:inline">Select Image to view in Lightbox</p>
+					<br>
+					<p class="small1" style="display:inline">Select Label to view as text.js<p>
+
+			<div class="row">
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot1.png" onclick="openModal();currentSlide(1);" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm1.js" target="_blank">Algorithm 1</a></p>
+						</div>
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot2.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm2.js" target="_blank">Algorithm 2</a></p>
+						</div>
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot3.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm3.js" target="_blank">Algorithm 3</a></p>
+						</div>
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot4.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm4.js" target="_blank">Algorithm 4</a></p>
+						</div>
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot5.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm5.js" target="_blank">Algorithm 5</a></p>
+						</div>
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot6.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm6.js" target="_blank">Algorithm 6</a></p>
+					    </div>
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot7.png" onclick="openModal();currentSlide(7)" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm7.js" target="_blank">Algorithm 7</a></p>
+						</div>
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot8.png" onclick="openModal();currentSlide(8)" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm8.js" target="_blank">Algorithm 8</a></p>						
+						</div>
+						<div class="column">
+							<img src="assets/images/algorithmScreenShot9.png" onclick="openModal();currentSlide(9)" class="hover-shadow">
+							<p class="small"><a href="assets/algorithmFiles/algorithm9milfmovs..js" target="_blank">Algorithm 9</a></p>
+						</div>
+
+			<!-- 		<div class="algorithmPrints" id="algoPrints">
+						<p class="small"><a href="assets/algorithmFiles/algorithm1.js" target="_blank">Algorithm 1</a></p>
+						<p class="small"><a href="assets/algorithmFiles/algorithm2.js" target="_blank">Algorithm 2</a></p>
+						<p class="small"><a href="assets/algorithmFiles/algorithm3.js" target="_blank">Algorithm 3</a></p>
+						<p class="small"><a href="assets/algorithmFiles/algorithm4.js" target="_blank">Algorithm 4</a></p>
+						<p class="small"><a href="assets/algorithmFiles/algorithm5.js" target="_blank">Algorithm 5</a></p>
+						<p class="small"><a href="assets/algorithmFiles/algorithm6.js" target="_blank">Algorithm 6</a></p>
+						<p class="small"><a href="assets/algorithmFiles/algorithm7.js" target="_blank">Algorithm 7</a></p>
+						<p class="small"><a href="assets/algorithmFiles/algorithm8.js" target="_blank">Algorithm 8</a></p>
+						<p class="small"><a href="assets/algorithmFiles/algorithm9.js" target="_blank">Algorithm 9</a></p>
+					</div> -->
+				</div>
+						
+				<!-- The modal/lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1/9</div>
+						<img src="assets/images/algorithmScreenShot1.png" style="width:100%" class="algLightB">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">2/9</div>
+						<img src="assets/images/algorithmScreenShot2.png" style="width:100%" class="algLightB">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">3/9</div>
+						<img src="assets/images/algorithmScreenShot3.png" style="width:100%" class="algLightB">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">4/9</div>
+						<img src="assets/images/algorithmScreenShot4.png" style="width:100%" class="algLightB">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">5/9</div>
+						<img src="assets/images/algorithmScreenShot5.png" style="width:100%"class="algLightB">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">6/9</div>
+						<img src="assets/images/algorithmScreenShot6.png" style="width:100%" class="algLightB">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">7/9</div>
+						<img src="assets/images/algorithmScreenShot7.png" style="width:100%" class="algLightB">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">8/9</div>
+						<img src="assets/images/algorithmScreenShot8.png" style="width:100%" class="algLightB">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">9/9</div>
+						<img src="assets/images/algorithmScreenShot9.png" style="width:100%" class="algLightB">
+					</div>
+
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+				<div id="lightbox-container">
+					<!-- Thumbnail images controls -->
+					<div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot1.png" onclick="currentSlide(1)" alt="AlgorithmScreenShot1">
+					</div>
+					<div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot2.png" onclick="currentSlide(2)" alt="AlgorithmScreenShot2">
+					</div>
+					<div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot3.png" onclick="currentSlide(3)" alt="AlgorithmScreenShot3">
+					</div><div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot4.png" onclick="currentSlide(4)" alt="AlgorithmScreenShot4">
+					</div><div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot5.png" onclick="currentSlide(5)" alt="AlgorithmScreenShot5">
+					</div><div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot6.png" onclick="currentSlide(6)" alt="AlgorithmScreenShot6">
+					</div><div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot7.png" onclick="currentSlide(7)" alt="AlgorithmScreenShot7">
+					</div><div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot8.png" onclick="currentSlide(8)" alt="AlgorithmScreenShot8">
+					</div><div class="column">
+						<img class="demo" src="assets/images/algorithmScreenShot9.png" onclick="currentSlide(9)" alt="AlgorithmScreenShot9">
+					</div>
+				</div>
+	         </div>
+		</div>
+		
+
+	</div>
+
+				<div id="edu" class="displayAreaItem">
+					<!-- <p>Education</p> -->
+				</div>
+				<div id="contact" class="displayAreaItem">
+		  <div class="fa-container2">
+			<div class="fa-item2">
+				<a href="tel:252-571-5303" class="fa fa2"><i href="#" class="fa fa-phone fa2"></i></a>
+				<p class="faDescribe3"><a class="contactLink" href="tel:252-571-5303">252-571-5303</a></p>
+			</div>
+			<div class="fa-item2">
+				<i style="color:#0080f1b0;" class='fa fa-location-arrow fa'></i>
+				<p class="faDescribe3">I currently reside in Greenville, North Carolina.  Though I am willing to relocate.</p> 
+			</div>
+			<div class="fa-item2">
+				<a href="mailto:a.thomas.rio@gmail.com?Subject=Hello Thomas" target="_top" class="contactLink fa fa2"><i class='fa fa-envelope fa2'></i></a>
+				<p class="faDescribe3"><a href="mailto:a.thomas.rio@gmail.com?Subject=Hello Thomas" target="_top" class="contactLink">A.Thomas.Rio@Gmail.com</a></p>
+			</div>
+		</div>
+
+
+				</div>
+				<div id="resumeSquare" class="displayAreaItem">
+						<div class="button" align="center"><a class="downloadBtn" href="assets/images/Thomas_Ashton_Rio_Resume.pdf" download="Thomas Ashton Rio Resume" target="_blank">Download PDF</a></div>
+						<img id="resume" 
+						src="assets/images/ResumePic.png">
+				</div>
+			</div>
+			<div class='about-container-container'>
+				<div class="about-container">
+					<!-- start of function, make all div in the display area display:none,
+					Then, whichever one you click on, make that specifically display:block  -->
+					<a onclick="aboutShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Skills</h1>
+					</div></a>
+					<a onclick="folioShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Folio Projects</h1>
+					</div></a>
+					<a onclick="algorithmsShow()" href="#" class="about-item"><div class="about-item">
+						<h1>JS Algorithms</h1>
+					</div></a>
+				</div>
+				<div class="about-container">
+					<!-- onclick="eduShow()" went with this. removed for now -->
+				
+					<a onclick="contactShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Contact</h1>
+					</div></a>
+					<a onclick="resumeShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Resume</h1>
+					</div></a>
+					<a  href="#arrowBounce" class="about-item"><div class="about-item">
+						<h1  class="arrowBounce">&#10597</h1>
+					</div></a>
+				</div>
+			</div>
+		</div>
+		<div class="fa-container" id="arrowBounce">
+			<div class="fa-item">
+				<a href="https://github.com/sunbun2461"  target="_blank"
+				class="fa fa-github"></a>
+				<a href="https://github.com/sunbun2461"  target="_blank" class="fa-link"><p class="faDescribe">GitHub</p>
+				<p class="faDescribe2">I've 'Pushed' HTML, CSS, JavaScript, and Bootstrap projects to my GitHub, check it out!
+				</p></a>
+			</div>
+			<div class="fa-item">
+				<a href="https://www.linkedin.com/in/thomas-rio-b2462a3b/" target="_blank" class="fa fa-linkedin"></a>
+				<a href="https://www.linkedin.com/in/thomas-rio-b2462a3b/"  target="_blank" class="fa-link"><p class="faDescribe">LinkedIn</p>
+				<p class="faDescribe2">Want some more information on me? Care to see who has endorsed me?  
+				</p></a>
+			</div>
+			<!-- <a href="#" class="fa fa-twitter"></a> -->
+			<div class="fa-item">
+				<a href="http://immaturegenius.com" class="fa fa-code" aria-hidden="true"></a>
+				<a href="http://immaturegenius.com"  target="_blank" class="fa-link">
+				<p class="faDescribe">My Blog</p>
+				<p class="faDescribe2">Want to see what I really think about Coding?   immatureGenius is a blog chronicling my journey through JavaScript from Vanilla JS and will stick with me as I start the MEAN stack.</p></a>  <!-- ImmatureGenius.com is a blog I've started about my JavaScript Journey. It follows me from Vanilla JS through my MEAN stack adventures and serves as a great study/recap resource.
+				</p> -->
+			</div>
+			<div class="fa-item">
+				<a  href="https://www.freecodecamp.org/sunbun2461" class="fa fa-free-code-camp" target="_blank" ></a>
+				<a href="https://www.freecodecamp.org/sunbun2461" target="_blank" class="fa-link">
+				<p class="faDescribe">FreeCodeCamp</p>
+				<p class="faDescribe2">FreeCodeCamp.org is a free, extensive, expansive, boot-camp styled online learning environment that I have utilized to master the web stack. <b style="display: flex;justify-content: center;">(HTML,CSS,JavaScript)</b></p>  
+				<p style="font-weight: bold;margin-top:0%;" class="faDescribe2">I am currently working in React Redux, Angular JS, SASS, API's, and soon Node.js.
+				</p>
+			</a>
+			    <a class="fcc-link" href="assets/images/freecodecampCert.png" target="_blank"><p>Responsive Web Design Certification (300 hours)</p></a>
+			    <a class="fcc-link" href="https://www.freecodecamp.org/certification/sunbun2461/javascript-algorithms-and-data-structures" target="_blank"><p>Javascript Algorithms And Data Structures Certification (300 hours)</p></a>
+				
+		</div>
+	</div>
+	<script>
+		function goWhite(){
+		var xWhite = document.getElementsByClassName('white');
+		var i;
+		for(i = 0; xWhite.length;i++){
+			xWhite[i].style.color = 'white';
+		}	
+		}
+
+
+
+
+		document.getElementById('startPage').style.display = 'flex';
+		document.getElementById('startPage2').style.display = 'flex';
+		
+		// function  myFunction(){
+					// 	var x = document.getElementById("myLinks");
+					// 	if (x.style.display === "block"){
+								// 		x.style.display = "none";
+					// 	}else{
+								// 		x.style.display = "block";
+					// 	}
+		// }
+		openNav = () =>
+			document.getElementById('myNav').style.width = '100%';  // trying both function types for practice
+			openNav2 = () => {
+			document.getElementById('myNav').style.width = '250px';
+			document.getElementById('main').style.marginLeft = '250px';
+			document.body.style.backgroundColor = 'rgba(6,66,115,.4)';
+		}
+			
+		function closeNav(){
+			document.getElementById('myNav').style.width = '0%';
+			document.getElementById('main').style.marginLeft='0%';
+			document.body.style.backgroundColor = 'white';
+		}
+		
+		function homeShow(){
+			let aboutSquare = document.getElementsByClassName('displayAreaItem');
+			for(let i = 0; i < aboutSquare.length;i++){
+				aboutSquare[i].style.display = 'none';
+			}
+			document.getElementById('startPage').style.display = 'flex';
+			document.getElementById('startPage2').style.display = 'flex';
+		
+		}
+
+		function aboutShow(){
+			let aboutSquare = document.getElementsByClassName('displayAreaItem');
+			for(let i = 0; i < aboutSquare.length;i++){
+			aboutSquare[i].style.display = 'none';
+			}
+			document.getElementById('aboutThomas').style.display = 'block';
+		}
+		function folioShow(){
+			let aboutSquare = document.getElementsByClassName('displayAreaItem');
+			for(let i = 0; i < aboutSquare.length;i++){
+			aboutSquare[i].style.display = 'none';
+			}
+			document.getElementById('folio').style.display = 'flex';
+		}
+		function algorithmsShow(){
+			let aboutSquare = document.getElementsByClassName('displayAreaItem');
+			for(let i = 0; i < aboutSquare.length;i++){
+			aboutSquare[i].style.display = 'none';
+			}
+			document.getElementById('algorithms').style.display = 'block';
+		}
+		function eduShow(){
+			let aboutSquare = document.getElementsByClassName('displayAreaItem');
+			for(let i = 0; i < aboutSquare.length;i++){
+			aboutSquare[i].style.display = 'none';
+			}
+			document.getElementById('edu').style.display = 'block';
+		}
+		function contactShow(){
+			let aboutSquare = document.getElementsByClassName('displayAreaItem');
+			for(let i = 0; i < aboutSquare.length;i++){
+			aboutSquare[i].style.display = 'none';
+			}
+			document.getElementById('contact').style.display = 'block';
+		}
+		function resumeShow(){
+			let aboutSquare = document.getElementsByClassName('displayAreaItem');
+			for(let i = 0; i < aboutSquare.length;i++){
+			aboutSquare[i].style.display = 'none';
+			}
+			document.getElementById('resumeSquare').style.display = 'block';
+		};
+
+
+
+
+
+		// open the modal
+		function openModal(){
+			document.getElementById('myModal').style.display = 'block';
+		};
+		
+		// close the modal
+		function closeModal(){
+			document.getElementById('myModal').style.display = 'none';
+		};
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n){
+			showSlides(slideIndex += n);
+		};
+
+		// thumbnail image controls
+		function currentSlide(n){
+			showSlides(slideIndex = n);
+		};
+
+
+		function showSlides(n){
+			var i;
+			var slides = document.getElementsByClassName('mySlides');
+			var dots = document.getElementsByClassName('demo');
+			var captionText = document.getElementById('caption');
+				if(n > slides.length){
+					slideIndex = 1
+				}
+				if(n < 1){
+					slideIndex = slides.length;
+				}
+					for(i = 0; i < slides.length; i++){
+						slides[i].style.display = 'none';
+					}
+					for(i = 0; i < dots.length; i++){
+						dots[i].className = dots[i].className.replace(' active', '');
+					}
+					slides[slideIndex-1].style.display = 'block';
+					dots[slideIndex-1].className += ' active';
+					captionText.innerHTML = dots[slideIndex-1].alt;
+				};
+
+	</script>
+	
+</body>
+</html>

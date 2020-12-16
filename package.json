@@ -1,0 +1,8 @@
+{
+  "name": "WebDevelopmental",
+  "version": "1.0.0",
+  "dependencies": {
+    "donutty": "^2.0.0",
+    "jquery": "^3.5.1"
+  }
+}

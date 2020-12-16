@@ -1,0 +1,238 @@
+<!--
+website for local machine:
+file:///home/thomas/Dropbox/Web%20Dev/MyGit/Portfolio/webdevelopfolio-about.html
+	building this mobile first, so i will assume everything is going to be for mobile, and then change it. however, does that mean I need two nav bars? i dont put the media query in the HTML so maybe yes I do need two nav bars.
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push_opacity
+current issues: 4/20
+	favicon not working in the tab
+	when you hit the side nav, it resets the page, bringing you back to the top.
+Percentange like progress bar of how you are doing in each skill set (html, javaScript)
+contact page, specifically.
+More details about what kind of code you like, more algorigthms, obvs more sites, what you are interested in.
+
+Add a why choose me section, and get things from a 
+site that says why self taught devs are better and 
+use what criteria you fall into. make it snappy
+
+
+-->
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Folio</title>
+		<link rel="stylesheet" href="assets/stylesheets/mainfolio.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Quicksand|Permanent+Marker" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Lato&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!--<div class="mobile-container">
+					<div class="topnav">
+								<a href="#home" class="active"><i class="fa fa-home"></i></a>
+								<div id="myLinks">
+											<a href="#projects">Projects</a>
+						ume.html" target="_blank">R&eacute;sum&eacute</a>
+						<a href="#about">About</a>
+						</div>
+						<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars">
+									</i>
+						</a>
+		</div>-->
+		
+		<!-- this is how to build the overlay
+		https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay
+		-->
+		<div class="mobile-background"></div>
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="webdevelopfolio.html"><i class="fa fa-home"></i></a>
+				<a href="webdevelopfolio-about.html">About</a>
+				<a href="webdevelopfolio-projects.html">Projects</a>
+				<a href="webdevelopfolio-resume.html">R&eacute;sum&eacute;</a> <!-- resume -->
+			</div>
+		</div>
+			<nav>
+			<div class="navLeft">
+				<div class="nav-item">
+				<a href="#">Thomas Ashton Rio</a>
+				</div>
+			</div>		
+			<div class="navRight">
+				<div class="nav-item">
+				<a href="webdevelopfolio.html"><i class="fa fa-home"></i></a>
+				</div>
+				<div class="nav-item">
+				<a href="webdevelopfolio-about.html">About</a>
+				</div>
+				<div class="nav-item">
+				<a href="webdevelopfolio-projects.html">Projects</a>
+				</div>
+				<div class="nav-item">
+				<a href="webdevelopfolio-resume.html">R&eacute;sum&eacute;</a> <!-- resume -->
+				</div>
+			</div>
+		</nav>
+		<!-- <div id="main" style="overflow:hidden;"> -->
+			<div class="header">
+				
+				<span class="openbtnDesktop" href="#" onclick="openNav2()"><i class="fa fa-bars"></i></span>
+				<a class='openbtn' href="#" onclick="openNav()"><i class="fa fa-bars"></i></a>
+				<h1 class="mobileOnly">Thomas Ashton Rio</h1>
+				<h1 class="desktopOnly">Thomas<span>&#8226;</span>Ashton<span>&#8226;</span>Rio</h1>
+				<p style="font-weight: lighter;">Front-end Web Developer</p>
+				<!-- <h2></h2> -->
+				<div class="displayArea">
+					<div id="skills" class="displayAreaItem">
+						<p>Skills Page</p>
+					</div>
+					<div id="exp" class="displayAreaItem">
+						<p>Experience</p>
+					</div>
+					<div id="certs" class="displayAreaItem">
+						<p>Certs</p>
+					</div>
+					<div id="edu" class="displayAreaItem">
+						<p>Education</p>
+					</div>
+					<div id="goals" class="displayAreaItem">
+						<p>Goals</p>
+					</div>	
+					<div id="whatev" class="displayAreaItem">
+						<p>Whatever Else</p>	
+					</div>
+				</div>
+				<div class='about-container-container'>
+				<div class="about-container">
+					<!-- start of function, make all div in the display area display:none,
+						then, whichever one you click on, make that specifically display:block  -->
+					<a onclick="skillsShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Skills</h1>
+					</div></a>
+					<a onclick="expShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Experience</h1>
+					</div></a>
+					<a onclick="certShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Certs</h1>
+					</div></a>
+				</div>
+				<div class="about-container">
+					<a onclick="eduShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Education</h1>
+					</div></a>
+					<a onclick="goalsShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Goals</h1>
+					</div></a>
+					<a onclick="whatevShow()" href="#" class="about-item"><div class="about-item">
+						<h1>Whatever Else</h1>
+					</div></a>
+				</div>
+			</div>    
+			</div>
+				<div class="fa-container">
+					<div class="fa-item">
+						<a href="https://github.com/sunbun2461"  target="_blank"
+						class="fa fa-github"></a>
+						<p class="faDescribe">GitHub</p>
+					</div>
+					<div class="fa-item">
+						<a href="https://www.linkedin.com/in/thomas-rio-b2462a3b/" target="_blank" class="fa fa-linkedin"></a>
+						<p class="faDescribe">LinkedIn</p>
+					</div>
+					<!-- <a href="#" class="fa fa-twitter"></a> -->
+					<div class="fa-item">
+						<a href="http://immaturegenius.com" class="fa fa-code" aria-hidden="true"></a>
+						
+						<p class="faDescribe">My Blog</p>
+					</div>
+					<div class="fa-item">
+						<a  href="assets/images/freecodecampCert.png" class="fa fa-free-code-camp" target="_blank" ></a>
+						
+						<p class="faDescribe">My Education</p>
+					</div>
+				</div>
+				<!-- <div class="fa-container">
+				</div> -->
+			<!--<img src="../images/me_chalkin_code2.jpeg" alt="Thomas Rio coding in chalk"> -->
+		<script>
+			// function  myFunction(){
+					// 	var x = document.getElementById("myLinks");
+					// 	if (x.style.display === "block"){
+							// 		x.style.display = "none";
+					// 	}else{
+							// 		x.style.display = "block";
+					// 	}
+			// }
+			openNav = () =>
+				document.getElementById('myNav').style.width = '100%';  // trying both function types for practice
+				openNav2 = () => {
+				document.getElementById('myNav').style.width = '250px';
+				document.getElementById('main').style.marginLeft = '250px';
+				document.body.style.backgroundColor = 'rgba(6,66,115,.4)';
+			}
+				
+			function closeNav(){
+				document.getElementById('myNav').style.width = '0%';
+				document.getElementById('main').style.marginLeft='0%';
+				document.body.style.backgroundColor = 'white';
+			}
+
+			
+
+
+			function skillsShow(){
+				let aboutSquare = document.getElementsByClassName('displayAreaItem'); 
+				for(let i = 0; i < aboutSquare.length;i++){
+				aboutSquare[i].style.display = 'none';
+				}
+				document.getElementById('skills').style.display = 'block'; 
+			} 
+			function expShow(){
+				let aboutSquare = document.getElementsByClassName('displayAreaItem');
+				for(let i = 0; i < aboutSquare.length;i++){
+				aboutSquare[i].style.display = 'none';
+				} 
+
+				document.getElementById('exp').style.display = 'block'; 
+			} 
+			function certShow(){
+				let aboutSquare = document.getElementsByClassName('displayAreaItem'); 
+				for(let i = 0; i < aboutSquare.length;i++){
+				aboutSquare[i].style.display = 'none';
+				}
+
+				document.getElementById('certs').style.display = 'block'; 
+			} 
+			function eduShow(){
+				let aboutSquare = document.getElementsByClassName('displayAreaItem'); 
+				for(let i = 0; i < aboutSquare.length;i++){
+				aboutSquare[i].style.display = 'none';
+				}
+
+				document.getElementById('edu').style.display = 'block'; 
+			}
+			function goalsShow(){
+				let aboutSquare = document.getElementsByClassName('displayAreaItem'); 
+				for(let i = 0; i < aboutSquare.length;i++){
+				aboutSquare[i].style.display = 'none';
+				}
+
+				document.getElementById('goals').style.display = 'block'; 
+			} 
+			function whatevShow(){
+				let aboutSquare = document.getElementsByClassName('displayAreaItem');
+				for(let i = 0; i < aboutSquare.length;i++){
+				aboutSquare[i].style.display = 'none';
+				}
+
+				document.getElementById('whatev').style.display = 'block'; 
+			}
+		</script>
+		
+	</body>
+</html>
